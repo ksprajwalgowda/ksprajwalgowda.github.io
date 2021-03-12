@@ -31,7 +31,7 @@
 <body>
 
     
-    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top"  style="background-color: rgba(34, 27, 27,0.6);" >
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark  fixed-top color-nav"    >
         <div class="container">
           <a class="navbar-brand  " href="#home"> <strong> <span>P</span>rajwal <span>G</span>owda </strong></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -244,8 +244,8 @@
         
           <div class="row">
            
-            <div class="col col-md-3 col-sm-12 col-12">
-              <div class="container-fluid m-5 p-5">
+            <div class="col col-md-3 col-sm-12 col-12 ">
+              <div class="p-5">
                 <div class="box">
                   <div class="spin-container">
                     <div class="shape">
@@ -400,6 +400,16 @@
 
 
 </script>
+
+<script>
+  window.onscroll = () => {
+    const nav = document.querySelector('#navbar');
+    if(this.scrollY <= 250) nav.style.backgroundColor = 'transparent'; else nav.style.backgroundColor = 'rgba(34, 27, 27,0.8)';
+  };
+</script>
+
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
