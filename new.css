@@ -5,6 +5,7 @@ html{
 body{
   height: 100%;
   width: 100%;
+  max-width: 
 }
 
 footer {
@@ -266,10 +267,3 @@ a:hover img{
 }
 
 
-color-nav{
-background-color: rgba(34, 27, 27,0.6)!important;
-}
-
-color-nav1{
-  background-color: transparent!important;
-  }
