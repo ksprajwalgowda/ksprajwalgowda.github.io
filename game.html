@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background: #3A1C71;  /* fallback for old browsers */
+          background: -webkit-linear-gradient(to left, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to left, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          
+            font-color:#FDFDFE;
+            font-size:40px;
+            font-family:'Source Code Pro'
+          }
+          
+          td {
+            background-color:white;
+            border-radius:25%;
+            opacity:.2;
+            width:50px;
+            height:50px;
+            text-align:center;
+            font-family: 'Roboto', sans-serif;
+            color:white;
+          }
+          
+          .text{
+              color: white;
+              opacity: 1;
+              /* z-index: 2; */
+              background-color: transparent;
+              border: none; 
+          }
+          
+          td:hover{
+            opacity:0.4;
+          }
+          
+          .content{
+           position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display:block;
+          }
+          
+          table{
+            width:300px;
+            height:300px;
+          }
+          
+          .table_overlay{
+            position:absolute;
+              top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          
+              width:300px;
+            height:300px;
+          }
+          
+          .modal {
+              display:none;/* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              left: 0;
+              top: 0;
+            
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+          }
+          
+          /* Modal Content/Box */
+          .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto; /* 15% from the top and centered */
+            padding: 0px;
+            border-radius:10px;
+            width: 400px;
+            height:200px;
+            font-size:17px;
+            text-align:center;
+            font-family:'Montserrat', sans-serif;;
+          }
+          
+          .modal-header {
+            padding: 2px;
+            border-radius:10px 10px 0 0;
+          }
+          
+          .modal-body{
+            top: -10px;
+            position: relative;
+          }
+          
+          btn{
+            position: relative;
+            top: 10px;
+            border-radius:7px;
+            padding:10px;
+            margin-top:10px;
+            color:white;
+            background-color:#EF798A;
+            cursor:pointer;
+          }
+          
+          btn:hover{
+            background-color:#CC4C5E;
+          }
+    </style>
+    <div class="content">
+        <table class="table_overlay">
+        <tr>
+          <td id="square_one_text" class="text"></td>
+          <td id="square_two_text" class="text"></td>
+          <td id="square_three_text" class="text"></td>
+        </tr>
+        <tr>
+           <td id="square_four_text" class="text"></td>
+           <td id="square_five_text" class="text"></td>
+           <td id="square_six_text" class="text"></td>
+        </tr>
+        <tr>
+           <td id="square_seven_text" class="text"></td>
+           <td id="square_eight_text" class="text"></td>
+           <td id="square_nine_text" class="text"></td>
+        </tr>
+      </table>
+    <div class="board">
+      <table>
+        <tr>
+          <td id="square_one"></td>
+     
+           <td id="square_two"></td>
+    
+           <td id="square_three"></td>
+        </tr>
+        <tr>
+           <td id="square_four"></td>
+           <td id="square_five"></td>
+           <td id="square_six"></td>
+        </tr>
+        <tr>
+           <td id="square_seven"></td>
+           <td id="square_eight"></td>
+           <td id="square_nine"></td>
+        </tr>
+      </table> 
+    </div>
+      
+    
+    </div>
+    
+    <div id="myModal" class="modal animated fadeIn">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+         <div class="modal-header">
+        <h2>Game Over</h2>
+      </div>
+        <div class="modal-body">
+        <p class="modal_text"></p>
+          <btn id="restartBtn">Play again?</btn>
+        </div>
+      </div>
+    
+    </div>
+    
+   
+<script src="game.js"></script>
+</body>
+</html>
