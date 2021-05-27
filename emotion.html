@@ -80,11 +80,13 @@ CY.loader()
    .licenseKey("d48dfc9880c32dc64f4e8b766604c34c53ff97155c5d")
    
    .addModule(CY.modules().FACE_EMOTION.name)
+   .loadErrorHandler((err)=>runit(err)) // Optional
+   .runErrorHandler((err)=>runit(err))// Optional
    .load()
    .then(({ start, stop }) => start());
    
    const emo_div = document.querySelector("#emotion");
-   const emo1_div = document.querySelector("#emotion1");
+   
    var ee;
    
    
