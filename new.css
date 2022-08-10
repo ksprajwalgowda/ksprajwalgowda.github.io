@@ -266,6 +266,12 @@ a:hover img{
   transform: scale(1.1); 
 }
 
+.tech img{
+  transition: 0.1s all ease-in-out; 
+}
+.tech:hover img{
+  transform: scale(1.1); 
+}
 
 
 
